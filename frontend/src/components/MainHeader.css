@@ -1,0 +1,298 @@
+.main-header-shell {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 1rem 1rem 0;
+  backdrop-filter: blur(18px);
+}
+
+.main-header {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0.9rem 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  border-radius: 22px;
+  background: rgba(250, 248, 255, 0.86);
+  box-shadow: 0 18px 44px -32px rgba(86, 58, 150, 0.34);
+}
+
+.main-header-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.main-header-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #9a80e2 0%, #7057bb 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.main-header-brand-copy {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.main-header-brand-copy strong {
+  font-size: clamp(1.2rem, 2vw, 1.58rem);
+  letter-spacing: -0.03em;
+}
+
+.main-header-brand-copy small {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.main-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.main-header-signin,
+.main-header-signup,
+.main-header-signout {
+  height: 42px;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.main-header-signin {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(214, 205, 237, 0.92);
+}
+
+.main-header-signup {
+  color: #ffffff;
+  background: linear-gradient(135deg, #9a80e2 0%, #7459c4 100%);
+  box-shadow: 0 14px 28px -24px rgba(108, 76, 187, 0.95);
+}
+
+.main-header-signout {
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  background: #ffffff;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.main-header-user {
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main-header-menu-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.26rem;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.main-header-menu-button:hover {
+  transform: translateY(-1px);
+}
+
+.main-header-menu-button.is-open {
+  background: #f0eaff;
+  border-color: #cdbfed;
+}
+
+.main-header-menu-button span {
+  width: 16px;
+  height: 2px;
+  margin-left: 11px;
+  border-radius: 999px;
+  background: #4d3b7a;
+}
+
+.main-header-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  border: 0;
+  padding: 0;
+  background: rgba(33, 22, 61, 0.42);
+}
+
+.main-header-drawer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 60;
+  width: min(390px, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  border-radius: 28px;
+  background: rgba(251, 249, 255, 0.96);
+  box-shadow: 0 28px 64px -32px rgba(60, 38, 112, 0.52);
+  backdrop-filter: blur(24px);
+}
+
+.main-header-drawer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.main-header-drawer-top p {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.main-header-drawer-top h2 {
+  margin: 0.35rem 0 0;
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.main-header-close {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  border-radius: 14px;
+  background: #f1ebff;
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.main-header-search {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.main-header-search span {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.main-header-search input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(214, 205, 237, 0.92);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 0 0.95rem;
+  color: var(--text-primary);
+}
+
+.main-header-nav {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.main-header-nav-link {
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.22rem;
+  text-decoration: none;
+  border: 1px solid rgba(228, 221, 245, 0.96);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.main-header-nav-link:hover {
+  transform: translateX(-2px);
+  border-color: #c9bce9;
+}
+
+.main-header-nav-link strong {
+  font-size: 1rem;
+}
+
+.main-header-nav-link span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.main-header-nav-link.is-active {
+  border-color: #c7b8ea;
+  background: linear-gradient(180deg, rgba(243, 237, 255, 0.96) 0%, rgba(255, 255, 255, 0.96) 100%);
+}
+
+.main-header-empty {
+  margin: 0.9rem 0 0;
+  color: var(--text-secondary);
+}
+
+.main-header-drawer-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(228, 221, 245, 0.96);
+}
+
+.main-header-drawer-footer span {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.main-header-drawer-footer p {
+  margin: 0.35rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .main-header-shell {
+    padding: 0.75rem 0.75rem 0;
+  }
+
+  .main-header {
+    padding: 0.8rem 0.85rem;
+  }
+
+  .main-header-brand-copy small,
+  .main-header-signin,
+  .main-header-signup {
+    display: none;
+  }
+}

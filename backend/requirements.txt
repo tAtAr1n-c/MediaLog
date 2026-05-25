@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+sqlalchemy[asyncio]>=2.0
+aiosqlite>=0.19
+passlib>=1.7
+python-jose[cryptography]>=3.3
+python-multipart>=0.0.9
+httpx>=0.26
+tenacity>=8.2
+python-dotenv>=1.0

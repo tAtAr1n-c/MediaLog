@@ -1,0 +1,330 @@
+.my-reviews-page {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.my-reviews-shell {
+  width: min(1280px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.my-reviews-hero,
+.my-reviews-toolbar,
+.my-reviews-item {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.my-reviews-hero {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.my-reviews-kicker {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.my-reviews-hero h1 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.my-reviews-handle {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.my-reviews-copy {
+  max-width: 62ch;
+  margin: 0.85rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.my-reviews-hero-actions {
+  display: grid;
+  justify-items: end;
+  gap: 0.7rem;
+}
+
+.my-reviews-primary,
+.my-reviews-pill {
+  min-height: 44px;
+  padding: 0 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.my-reviews-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #9a80e2 0%, #7158bc 100%);
+}
+
+.my-reviews-pill {
+  color: var(--accent-strong);
+  background: rgba(239, 232, 255, 0.88);
+}
+
+.my-reviews-toolbar {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto auto;
+  gap: 0.8rem;
+  align-items: end;
+}
+
+.my-reviews-search {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.my-reviews-search span {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.my-reviews-search input {
+  width: 100%;
+  height: 50px;
+  padding: 0 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--text-primary);
+}
+
+.my-reviews-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.my-reviews-filter {
+  height: 50px;
+  padding: 0 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.my-reviews-filter.is-active {
+  border-color: transparent;
+  background: linear-gradient(135deg, #9a80e2 0%, #7158bc 100%);
+  color: #ffffff;
+}
+
+.my-reviews-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 0.7rem;
+}
+
+.my-reviews-metrics article {
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.my-reviews-metrics span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.my-reviews-metrics strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.my-reviews-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.my-reviews-item {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
+.my-reviews-cover {
+  position: relative;
+  min-height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.my-reviews-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(35, 23, 68, 0.08) 0%, rgba(35, 23, 68, 0.72) 100%);
+}
+
+.my-reviews-cover-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-reviews-cover span,
+.my-reviews-cover strong {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  min-height: 32px;
+  padding: 0 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+}
+
+.my-reviews-body {
+  padding: 1.15rem;
+}
+
+.my-reviews-item-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.my-reviews-item-top h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+
+.my-reviews-item-top p {
+  margin: 0.32rem 0 0;
+  color: var(--text-secondary);
+}
+
+.my-reviews-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.my-reviews-badges span {
+  min-height: 34px;
+  padding: 0 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(239, 232, 255, 0.9);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.my-reviews-delete {
+  min-height: 34px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(231, 160, 181, 0.92);
+  border-radius: 999px;
+  background: rgba(255, 241, 245, 0.92);
+  color: #8c3349;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.my-reviews-delete:disabled {
+  cursor: wait;
+  opacity: 0.64;
+}
+
+.my-reviews-summary,
+.my-reviews-text {
+  margin: 0.85rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+.my-reviews-message {
+  display: block;
+  padding: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .my-reviews-hero,
+  .my-reviews-toolbar,
+  .my-reviews-item {
+    grid-template-columns: 1fr;
+  }
+
+  .my-reviews-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-reviews-hero-actions {
+    justify-items: start;
+  }
+
+  .my-reviews-item {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .my-reviews-shell {
+    width: calc(100% - 1rem);
+  }
+
+  .my-reviews-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .my-reviews-item-top {
+    flex-direction: column;
+  }
+
+  .my-reviews-badges {
+    justify-content: flex-start;
+  }
+}

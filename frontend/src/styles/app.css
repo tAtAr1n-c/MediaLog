@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --page-bg: #f2eef9;
+  --page-bg-soft: #faf7ff;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: #ffffff;
+  --border: #ddd5ef;
+  --border-strong: #d3cae9;
+  --text-primary: #2f2550;
+  --text-secondary: #665b86;
+  --text-muted: #8175a5;
+  --accent: #7d63cf;
+  --accent-soft: #efe8ff;
+  --accent-strong: #6247b2;
+  --shadow-soft: 0 20px 40px -34px rgba(92, 67, 163, 0.32);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(170, 138, 226, 0.26) 0%, transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(208, 177, 239, 0.2) 0%, transparent 34%),
+    var(--page-bg);
+  color: var(--text-primary);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-state-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.app-state-panel {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 1rem 1.2rem;
+  color: var(--text-primary);
+  font-weight: 800;
+}

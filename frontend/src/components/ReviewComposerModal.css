@@ -1,0 +1,325 @@
+.review-composer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  border: 0;
+  padding: 0;
+  background: rgba(30, 20, 56, 0.62);
+  backdrop-filter: blur(8px);
+}
+
+.review-composer-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 90;
+  width: min(1120px, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+  gap: 1.4rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(216, 208, 234, 0.98);
+  border-radius: 36px;
+  background: linear-gradient(180deg, rgba(248, 244, 255, 0.98) 0%, rgba(255, 255, 255, 0.98) 100%);
+  box-shadow: 0 44px 120px -56px rgba(49, 33, 89, 0.85);
+  transform: translate(-50%, -50%);
+}
+
+.review-composer-art {
+  position: relative;
+  min-height: 100%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 28px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.review-composer-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(34, 23, 65, 0.1) 0%, rgba(34, 23, 65, 0.72) 100%);
+}
+
+.review-composer-art-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-composer-art-head {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.review-composer-art-body {
+  position: relative;
+  z-index: 2;
+}
+
+.review-composer-art-head span,
+.review-composer-art-head strong {
+  min-height: 32px;
+  padding: 0 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.review-composer-art-body p {
+  margin: 0;
+  font-size: clamp(1.7rem, 2vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.review-composer-art-body small {
+  display: block;
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.review-composer-form {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.review-composer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.review-composer-top p {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.review-composer-top h2 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(2rem, 3vw, 3.05rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.review-composer-close {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(216, 208, 234, 0.98);
+  border-radius: 50%;
+  background: rgba(241, 235, 255, 0.96);
+  color: var(--text-primary);
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.review-composer-type-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.review-composer-type {
+  min-height: 40px;
+  padding: 0 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.review-composer-type.is-active {
+  border-color: transparent;
+  background: linear-gradient(135deg, #9a80e2 0%, #7158bc 100%);
+  color: #ffffff;
+}
+
+.review-composer-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  gap: 0.8rem;
+}
+
+.review-composer-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.review-composer-field span {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.review-composer-field input,
+.review-composer-field textarea {
+  width: 100%;
+  border: 1px solid #d7cdf0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 0.95rem 1rem;
+  color: var(--text-primary);
+  resize: vertical;
+}
+
+.review-composer-search-results {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.review-composer-search-results p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.review-composer-result,
+.review-composer-selected {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  display: grid;
+  gap: 0.22rem;
+  border: 1px solid #d7cdf0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.review-composer-result {
+  cursor: pointer;
+}
+
+.review-composer-result:hover {
+  border-color: #9a80e2;
+}
+
+.review-composer-selected {
+  border-color: #9a80e2;
+  background: rgba(240, 233, 255, 0.9);
+}
+
+.review-composer-result span,
+.review-composer-selected span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.review-composer-stars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.review-composer-star {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(232, 223, 255, 0.88);
+  color: rgba(96, 74, 161, 0.42);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.review-composer-star.is-filled {
+  color: #5f49a7;
+}
+
+.review-composer-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.review-composer-message {
+  margin: 0;
+  color: #7c3569;
+  font-weight: 700;
+}
+
+.review-composer-submit {
+  min-height: 48px;
+  padding: 0 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8d74d8 0%, #6647b5 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 24px 44px -30px rgba(97, 73, 167, 0.92);
+  cursor: pointer;
+}
+
+.review-composer-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.review-tone-iris {
+  background: linear-gradient(160deg, #c8baf4 0%, #9a80e2 55%, #7f67ca 100%);
+}
+
+.review-tone-lilac {
+  background: linear-gradient(160deg, #bda8f2 0%, #8f73d8 52%, #7259bc 100%);
+}
+
+.review-tone-plum {
+  background: linear-gradient(160deg, #a98ae8 0%, #7359bf 52%, #5c469f 100%);
+}
+
+.review-tone-midnight {
+  background: linear-gradient(160deg, #8b72d3 0%, #5f49a7 55%, #47367f 100%);
+}
+
+@media (max-width: 860px) {
+  .review-composer-dialog {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .review-composer-art {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .review-composer-dialog {
+    width: calc(100% - 1rem);
+    max-height: calc(100vh - 1rem);
+    border-radius: 28px;
+  }
+
+  .review-composer-row {
+    grid-template-columns: 1fr;
+  }
+}

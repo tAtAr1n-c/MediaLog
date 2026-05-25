@@ -1,0 +1,335 @@
+.people-page {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.people-shell {
+  width: min(1280px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.people-hero,
+.people-search-panel,
+.people-preview,
+.people-message,
+.people-empty {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.people-hero {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.people-kicker,
+.people-preview-head p {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.people-hero h1 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.people-copy {
+  max-width: 58ch;
+  margin: 0.85rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.people-profile-link {
+  min-height: 44px;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #9a80e2 0%, #7158bc 100%);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.people-search-panel {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.people-search {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.people-search span {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.people-search input {
+  width: 100%;
+  height: 50px;
+  padding: 0 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--text-primary);
+}
+
+.people-search-state {
+  margin-bottom: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 800;
+}
+
+.people-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.people-results {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+}
+
+.people-user-card {
+  width: 100%;
+  padding: 0.85rem;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.people-user-card.is-active {
+  border-color: #9a80e2;
+  background: rgba(240, 233, 255, 0.9);
+}
+
+.people-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #9a80e2 0%, #7158bc 100%);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.people-user-card strong,
+.people-user-card small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.people-user-card small {
+  margin-top: 0.18rem;
+  color: var(--text-secondary);
+}
+
+.people-preview {
+  min-height: 420px;
+  padding: 1.2rem;
+}
+
+.people-preview-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.people-preview-head h2 {
+  margin: 0.42rem 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+}
+
+.people-preview-head span {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.people-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 0.7rem;
+}
+
+.people-metrics article {
+  padding: 0.85rem;
+  border-radius: 18px;
+  background: rgba(239, 232, 255, 0.9);
+}
+
+.people-metrics span {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.people-metrics strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+.people-review-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.people-review-item {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 0.8rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(224, 216, 243, 0.96);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.people-review-cover {
+  position: relative;
+  min-height: 92px;
+  border-radius: 18px;
+  padding: 0.65rem;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  font-weight: 800;
+  overflow: hidden;
+}
+
+.people-review-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(35, 23, 68, 0.08) 0%, rgba(35, 23, 68, 0.72) 100%);
+}
+
+.people-review-cover-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.people-review-cover span {
+  position: relative;
+  z-index: 2;
+}
+
+.people-review-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.people-review-item p {
+  margin: 0.35rem 0 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.people-review-item small {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.people-message,
+.people-empty {
+  padding: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.people-preview-empty {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.review-tone-iris {
+  background: linear-gradient(160deg, #c8baf4 0%, #9a80e2 55%, #7f67ca 100%);
+}
+
+.review-tone-lilac {
+  background: linear-gradient(160deg, #bda8f2 0%, #8f73d8 52%, #7259bc 100%);
+}
+
+.review-tone-plum {
+  background: linear-gradient(160deg, #a98ae8 0%, #7359bf 52%, #5c469f 100%);
+}
+
+.review-tone-midnight {
+  background: linear-gradient(160deg, #8b72d3 0%, #5f49a7 55%, #47367f 100%);
+}
+
+@media (max-width: 900px) {
+  .people-hero,
+  .people-search-panel,
+  .people-layout,
+  .people-preview-head {
+    grid-template-columns: 1fr;
+  }
+
+  .people-hero,
+  .people-preview-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .people-shell {
+    width: calc(100% - 1rem);
+  }
+
+  .people-metrics,
+  .people-review-item {
+    grid-template-columns: 1fr;
+  }
+}
